@@ -1,0 +1,4 @@
+*.app
+.vscode/*.json
+.alpackages/Microsoft_Application_20.1.39764.39901.app
+.alpackages/Microsoft_System Application_20.1.39764.39901.app
