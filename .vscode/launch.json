@@ -1,0 +1,37 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "al",
+            "request": "launch",
+            "name": "Test OnPrem",
+            "server": "https://pvtest.printvis.com/testonpremupgdev",
+            "serverInstance": "testonpremupgdev",
+            "port": 443,
+            "authentication": "UserPassword",
+            "startupObjectId": 22,
+            "startupObjectType": "Page",
+            "breakOnError": true,
+            "launchBrowser": true,
+            "schemaUpdateMode": "Synchronize",
+            "enableLongRunningSqlStatements": true,
+            "tenant": "default",
+            "enableSqlInformationDebugger": true
+        },
+        {
+            "type": "al",
+            "request": "attach",
+            "name": "Test OnPrem - Attach",
+            "server": "https://pvtest.printvis.com/testonpremupgdev",
+            "serverInstance": "testonpremupgdev",
+            "port": 443,
+            "authentication": "UserPassword",
+            "breakOnError": true,
+            "enableLongRunningSqlStatements": true,
+            "tenant": "default",
+            "enableSqlInformationDebugger": true,
+            "breakOnNext": "WebClient",
+            "numberOfSqlStatements": 100
+        }
+    ]
+}
