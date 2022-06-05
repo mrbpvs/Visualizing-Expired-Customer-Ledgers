@@ -36,7 +36,7 @@ pageextension 50114 "Cust. Ledger Entries Ext" extends "Customer Ledger Entries"
     }
 
     var
-        NumerofDaysExpired: Integer;
+        NumberOfDaysExpired: Integer;
         DaysExpiredStyle: Text;
         TresholdSetup: Record "Treshold Setup";
 
@@ -52,9 +52,9 @@ pageextension 50114 "Cust. Ledger Entries Ext" extends "Customer Ledger Entries"
     begin
         NumberofDaysExpired := Rec.GetNumberOfDaysExpired();
         case NumberofDaysExpired of
-            TresholdSetup."Treshold 1 Value" .. TresholdSetup."Treshold 2 Value";
+            TresholdSetup."Treshold 1 Value" .. TresholdSetup."Treshold 2 Value":
             DaysExpiredStyle := Format(TresholdSetup."Treshold 1 Style");
-            TresholdSetup."Treshold 2 Value" .. 99999;
+            TresholdSetup."Treshold 2 Value" .. 99999:
             DaysExpiredStyle:= Format(TresholdSetup."Treshold 2 Style");
             else
                 DaysExpiredStyle := 'None';
